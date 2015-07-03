@@ -21,26 +21,27 @@
     </div>
     <div class="col-md-9">
          <div class="panel panel-primary" id="Family">
-             <div class="panel-heading heading" id="GettingStarted" >  <a href="#Family" onclick="FamilyPics()">My Family</a> </div>
+             <div class="panel-heading heading" onhover="FamilyPics()" style="cursor: pointer; cursor: hand;" >  myFamily</div>
     <div class="panel-body">
-        <div id="sort">
-		<button id="sort-order">Thumbnails List</button>
-		<button id="sort-chaos" class="selected">Chaotic Shuffle</button>
-		<select id="pp-basic-order-style" onchange="$('#pp-basic-order').polaroidStack('setStyle', $('#'+this.id+' :selected').val());">
-			<option>ClassicPolaroid</option>
-			<option selected="selected">MinLandscape</option>
-			<option>MinPortrait</option>
-		</select>
-	</div>
-	<canvas id="pp-basic-order" class="polaroidStack" width="600" height="600"></canvas>
-        
+	<center class="row">
+      <img src="img/thumbnail/1.jpg" data-content="1.jpg" width="80">
+      <img src="img/thumbnail/2.jpg" data-content="2.jpg" width="80">
+      <img src="img/thumbnail/3.jpg" data-content="3.jpg" width="80">
+      <img src="img/thumbnail/4.jpg" data-content="4.jpg" width="80">
+      <img src="img/thumbnail/5.jpg" data-content="5.jpg" width="80">
+      <img src="img/thumbnail/6.jpg" data-content="6.jpg" width="80">
+      <img src="img/thumbnail/7.jpg" data-content="71" width="80">
+      <img src="img/thumbnail/8.jpg" data-content="" width="80">
+      <img src="img/thumbnail/9.jpg" data-content="9.jpg" width="80">
+      <img src="img/thumbnail/10.jpg" data-content="10.jpg" width="80">
+    </center>
         
             </div>
         </div>
 
         
         <div class="panel panel-primary">
-    <div class="panel-heading heading" id="#NewsFeeds" style="cursor: pointer; cursor: hand;" onclick="feeds()">News Feeds
+    <div class="panel-heading heading" id="#NewsFeeds" style="cursor: pointer; cursor: hand;" onclick="feeds()">nyFeeds
              <span class="glyphicon glyphicon-collapse-down" style=" float:right"></span>
             </div>
     <div class="panel-body" id="feedBody" style="display:none">

@@ -20,6 +20,7 @@ public class Feeds {
 	// Reading the feed
 	SyndFeedInput input = new SyndFeedInput();
 	SyndFeed feed = input.build(new XmlReader(httpcon));
+	@SuppressWarnings("unchecked")
 	List<SyndEntry> entries = feed.getEntries();
 	Iterator<SyndEntry> itEntries = entries.iterator();
 	JSONObject json      = new JSONObject();
@@ -56,7 +57,13 @@ public class Feeds {
 		contents=contents.substring(0,end);
 		contents=contents.trim();
 		String Repository= contents;
-		jsonEle.put("Repository", Repository);
+		jsonEle.put("Repository", "@" + Repository);
+		
+		if(!entry.getContents().toString().contains("<blockquote>\n")){
+			jsonEle.put("Activity", entry.getTitle());
+			jsonEle.put("Repository", "");
+		}
+		
 //		System.out.println("Title: " + entry.getTitle());
 //		System.out.println("Link: " + entry.getLink());
 //		System.out.println("Author: " + entry.getAuthor());

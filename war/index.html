@@ -21,22 +21,29 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> 
       
-      
     <title>Newton Joshua</title>
     <link rel="shortcut icon" href="images/nn.jpg">
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
+       <link href="./css/airview.min.css" rel="stylesheet">
       <link href="data:text/css;charset=utf-8," data-href="css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
 <link rel="stylesheet" href="css/Style.css">
 <link rel="stylesheet" href="css/docs.min.css">
 <!-- Latest compiled and minified JavaScript -->
+      
       <script src="js/jquery.min.js"></script>
+<!--Poloroid-->
+      
 <script src="js/bootstrap.min.js"></script>
 <script src="js/fingerprint.js"></script>
 <script src="js/docs.min.js"></script>
+         
+  
 <script>
 function ajax(tab)
 {
+    document.getElementById("home").style.display= "none";
+    document.getElementById("contents").style.display= "";
 var xmlhttp;
 if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -217,11 +224,14 @@ xmlhttp.onreadystatechange=function()
     var GitFeed = document.createElement('a');
         GitFeed.href=arr[i].Link;
         GitFeed.className="list-group-item";
-        GitFeed.innerHTML= arr[i].Activity+ " @ " + arr[i].Repository+  "<br>"+  arr[i].Date;
+        GitFeed.innerHTML= "<div data-toggle='tooltip' data-placement='bottom' title='"+ arr[i].Title+"'>" +arr[i].Activity+ " " +arr[i].Repository+  "<br>"+  arr[i].Date+ "</div>";
      GitHub.appendChild(GitFeed);  
         }
         GitHub.style.height='400px';
         GitHub.style.overflow='scroll';
+        $('[data-toggle="tooltip"]').tooltip();
+        FaceBook.style.height='400px';
+        FaceBook.style.overflow='scroll';
     }
     
     }
@@ -261,11 +271,12 @@ xmlhttp.onreadystatechange=function()
     var FBPost = document.createElement('a');
         FBPost.href=arr[i].link;
         FBPost.className="list-group-item";
-        FBPost.innerHTML="<div class='row' data-toggle='tooltip' data-placement='right' title='"+ arr[i].message+"'><div class='col-md-3'><img src='"+arr[i].picture+"' width='100%'></div><div class='col-md-9'>" 
+        FBPost.innerHTML="<div class='row' data-toggle='tooltip' data-placement='bottom' title='"+ arr[i].message+"'><div class='col-md-3'><img src='"+arr[i].picture+"' width='100%'></div><div class='col-md-9'>" 
             +arr[i].story+ "<br>"+  arr[i].date +"</div></div>";
             $(FBPost).tooltip();
      FaceBook.appendChild(FBPost);  
         }
+        $('[data-toggle="tooltip"]').tooltip();
         FaceBook.style.height='400px';
         FaceBook.style.overflow='scroll';
     }
@@ -314,12 +325,17 @@ xmlhttp.send();
       
   </head>
 
-  <body onload="$('#myLogin').modal({backdrop: 'static'}); initialize(); ajax('AboutMe')" >
+  <body onload=" initialize(); " >
       <script>
 
           function initialize(){
 //              document.getElementById("continue").disabled=true;
       localStorage.logIn = 0;
+    $('#myLogin').modal({backdrop: 'static'});
+          }
+          function reload(){
+              document.getElementById("home").style.display= "";
+               document.getElementById("contents").style.display= "none";
           }
       </script>
    
@@ -702,7 +718,7 @@ By using our website, you hereby consent to our disclaimer and agree to its term
         </div></div>
         <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button id="continue" type="button" disabled class="btn btn-primary" onclick="login(); $('#myLogin').modal('hide');">Accept & Continue</button>
+        <button id="continue" type="button" disabled class="btn btn-primary" onclick="login(); $('#myLogin').modal('hide'); feeds();">Accept & Continue</button>
             
       </div>
     </div>
@@ -750,13 +766,13 @@ localStorage.logIn=1;}
             <li><a style="font-family:Great Vibes; font-size: 200%; ">NewtonJoshua.com</a></li>
           </ul>
           <ul class="nav navbar-nav">
-            <li id="AboutMe" ><a href="#" onclick="ajax('AboutMe'); active('AboutMe')">About Me</a></li>
+            <li id="AboutMe" class="active"><a href="#" onclick="active('AboutMe'); reload();">About Me</a></li>
               <li id="Resume"><a href="#" onclick="ajax('Resume'); active('Resume')">Resume</a></li>
               <li id="Developer"><a href="#"  onclick="$('#myModal').modal('show');">Developer</a></li>
           </ul>
         <ul class="nav navbar-nav navbar-right ">
                           
-                <a href="#" id="userDetails" style="color:white; font-family:Noto Sans" onclick="$('#myLogin').modal({backdrop: 'static'}); initialize();"></a>
+                <a href="#" id="userDetails" style="color:white; font-family:Noto Sans" onclick="initialize();"></a>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -812,7 +828,85 @@ localStorage.logIn=1;}
     </div>
      
 <div >
-<div  id="contents"></div>
+<div  id="contents">
+    </div>
+    <div id="home">
+    <div class="container">
+<div class="row">
+  <div class="col-md-3">
+      <div style="position:fixed; top: 80px; width:18.1%">
+                    <a href="https://in.linkedin.com/pub/newton-joshua/98/50a/86a"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x33.png" width="160" height="33" border="0" alt="View Newton Joshua's profile on LinkedIn"> </a> <br> <br>
+          
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Facebook Badge START --><a href="https://www.facebook.com/NewtonJoshua.A" title="Newton Joshua" target="_TOP"><img class="img" src="https://badge.facebook.com/badge/100000425370764.3313.1281615415.png" style="border: 0px;" alt="" /></a><br /><!-- Facebook Badge END -->  
+            </div>
+            <div class="col-md-6">
+                <!-- Facebook Badge START --><a href="https://www.facebook.com/NewtonJoshua.A" title="Newton Joshua" target="_TOP"><img class="img" src="https://badge.facebook.com/badge/100000425370764.1588.1404741863.png" style="border: 0px;" alt="" /></a><!-- Facebook Badge END -->
+            </div>
+          </div>
+<div style="height:100px">
+          </div>
+      
+    </div>
+    </div>
+    <div class="col-md-9">
+         <div class="panel panel-primary" id="Family">
+             <div class="panel-heading heading" style="cursor: pointer; cursor: hand;" >  myFamily</div>
+    <div class="panel-body" id="FamilYPics">
+	  <center class="row">
+
+    </center>
+            </div>
+        </div>
+
+        
+        <div class="panel panel-primary">
+    <div class="panel-heading heading" id="#NewsFeeds" style="cursor: pointer; cursor: hand;">myFeeds
+            </div>
+    <div class="panel-body" id="feedBody" style="display:none">
+        <div id="feed"></div>
+        <div class="row">
+            <div class="col-md-1"></div>
+        <div class="list-group col-md-6" id="FaceBook">
+  <a href="#FaceBook" class="list-group-item active">
+      <img src="images/Facebook.png" height="20px">
+     
+  </a>
+</div>
+            <div class="col-md-1"></div>
+        <div class="list-group col-md-4" id="GitHub">
+  <a href="#GitHub" class="list-group-item active">
+      <img src="images/github-octocat.png" height="20px">      
+  </a>
+</div>
+       </div>
+            </div>
+        </div>
+        
+        <div class="panel panel-primary">
+    <div class="panel-heading heading" id="">myFavorites</div>
+    <div class="panel-body">
+        
+            </div>
+        </div>
+    
+        <div class="panel panel-primary">
+    <div class="panel-heading heading" id="">about <a style="font-family:Great Vibes; font-size: 100%; color: white">NewtonJoshua.com</a></div>
+    <div class="panel-body">
+        
+            </div>
+        </div>
+       
+    
+    </div>
+    </div>
+</div>
+    
+    
+    
+    
+    </div>
    
     
 <!--
@@ -872,8 +966,30 @@ localStorage.logIn=1;}
     
     </div>
       <div style="height:50px"></div>
+    <script src="./js/vendor/tooltip.min.js"></script>
+    <script src="./js/airview.min.js"></script>
     <script>
-
+         var FamilYPics = document.getElementById('FamilYPics');
+        
+        for (var i=1; i< 81; i++){
+    var Pic = document.createElement('img');
+        Pic.src="img/thumbnail/"+ i +".jpg";
+        Pic.className="img-thumbnail";
+        Pic.height="50";
+        Pic.title= i + ".jpg";
+            $(Pic).airview({
+        url: './img/', 
+        width: 400, 
+        container:'body'
+	  });
+     FamilYPics.appendChild(Pic);  
+        }
+        
+//	  $("img").airview({
+//        url: './img/', 
+//        width: 250, 
+//        container:'body'
+//	  });
     </script>
     </body>
     </html>                
