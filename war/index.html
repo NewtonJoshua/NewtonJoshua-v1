@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Meta Tag -->
+<meta name="charset" content="ISO-8859-1">
+<meta name="description" content="This is the professional website of Newton Joshua. View His professional Details. This Website also explains His product, AITAM- Action Item Tracking And Management, developed usong HTML5 ang Java.">
+<meta name="keywords" content="Newton Joshua, Angelin Newton, Angelin Elfieda, AITAM, Action Item Tracker, Action Item Tracking And Management, Java Developer, HTML5 Developer">
+<meta name="copyright" content="Copyright © 2015 Newton Joshua & Angelin Newton">
+<meta name="author" content="Newton Joshua">
+<meta name="designer" content="Newton Joshua">
+<meta name="email" content="Newton.Angelin@gmail.com">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta http-equiv="Site-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+<meta http-equiv="Site-Exit" content="revealTrans(Duration=1.0,Transition=23)">
+<meta name="google-signin-scope" content="profile email">
+<meta name="google-signin-client_id" content="355260648083-0i4vq8ajgnmjr5fv9elkvn2l3jvhl8aj.apps.googleusercontent.com">
+ <script src="js/platform.js" async defer></script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> 
+      
+      
+    <title>Newton Joshua</title>
+    <link rel="shortcut icon" href="images/nn.jpg">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+      <link href="data:text/css;charset=utf-8," data-href="css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+<link rel="stylesheet" href="css/Style.css">
+<link rel="stylesheet" href="css/docs.min.css">
+<!-- Latest compiled and minified JavaScript -->
+      <script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/fingerprint.js"></script>
+<script src="js/docs.min.js"></script>
+<script>
+function ajax(tab)
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("contents").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","/"+tab+".html",true);
+xmlhttp.send();
+}
+
+
+function SendMail(user,name){
+        console.log("Name: "+name);
+    console.log("HTML: "+user);
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+//        if(xmlhttp.responseText=="Success"){
+//       
+//        var id=Math.floor((Math.random() * 99999) + 10000);
+//        var options= {
+//              type: "basic",
+//              title: "<b>Newton Joshua:</b>",
+//              message: "Hi "+ name +"<br> Thank you for visiting my website",
+//              iconUrl: "http://newtonjoshua.com/images/nn.jpg",
+//              //imageUrl: "url_to_preview_image"
+//            }
+//        chrome.notifications.create(id.toString(), options,  function() {} );
+//             }
+    }
+  }
+xmlhttp.open("POST","/Controller?action=Login&name="+name+"&user="+user,true);
+xmlhttp.send();
+}
+
+      
+      function active(tab){
+          document.getElementById('AboutMe').className = "";
+          document.getElementById('Resume').className = "";
+          document.getElementById('Developer').className = "";
+          document.getElementById(tab).className += "active";
+      }
+
+       function PrintElem(elem)
+    {
+        Popup($('#'+elem).html(),elem);
+    }
+
+    function Popup(data,elem) 
+    {
+        var mywindow = window.open('', elem, 'height=400,width=600');
+        mywindow.document.write('<html><head><title>'+elem+'</title>');
+        mywindow.document.write('<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+
+        mywindow.document.close(); // necessary for IE >= 10
+        mywindow.focus(); // necessary for IE >= 10
+
+        mywindow.print();
+        mywindow.close();
+
+        return true;
+    }
+      </script>
+
+<script>
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into Facebook.';
+    }
+  }
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '771830059601215',
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    posts      : true, // check login status
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.3' // use version 2.2
+  });
+
+  // Now that we've initialized the JavaScript SDK, we call 
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "js/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+    function GitFeed(){
+        var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+
+    var res= JSON.parse(xmlhttp.responseText);  
+        var arr=res.GitHub;
+        var GitHub = document.getElementById('GitHub');
+        
+        for (var i=0; i< arr.length; i++){
+    var GitFeed = document.createElement('a');
+        GitFeed.href=arr[i].Link;
+        GitFeed.className="list-group-item";
+        GitFeed.innerHTML= arr[i].Activity+ " @ " + arr[i].Repository+  "<br>"+  arr[i].Date;
+     GitHub.appendChild(GitFeed);  
+        }
+        GitHub.style.height='400px';
+        GitHub.style.overflow='scroll';
+    }
+    
+    }
+  
+xmlhttp.open("POST","/Controller?action=GitHub",true);
+xmlhttp.send();
+    }
+        function FbFeed(){
+//        var PostsAccessToken="CAAK9ZBbCHjT8BAGStUZCr1BKxOzKZCEitmzgIDtvM6pq0vx1136lAo5yKzBqduDbuwsZAvskYtdy8ikE19SRufmpJdDC1KaVyx29PCUQ1ZBGPTM6VoKHiDpK57UtObvi5EFd1QEbaBtT1koEf5O5KLd4wmJrrufZATEmpscTz5Ib5jRMXuNGPLFJJ4wemhD8HLhIY0yf0bZBDuP5ePl6tFs";
+//    FB.api(
+//    "/1008531222504381/feed",{access_token : PostsAccessToken},
+//    function (response) {
+//      if (response ) {
+//        document.getElementById('feed').innerHTML =(JSON.stringify(response))
+//      }
+//    }
+//); 
+            var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+
+    var res= JSON.parse(xmlhttp.responseText);  
+        var arr=res.Facebook;
+        var FaceBook = document.getElementById('FaceBook');
+        
+        for (var i=0; i< arr.length; i++){
+    var FBPost = document.createElement('a');
+        FBPost.href=arr[i].link;
+        FBPost.className="list-group-item";
+        FBPost.innerHTML="<div class='row' data-toggle='tooltip' data-placement='right' title='"+ arr[i].message+"'><div class='col-md-3'><img src='"+arr[i].picture+"' width='100%'></div><div class='col-md-9'>" 
+            +arr[i].story+ "<br>"+  arr[i].date +"</div></div>";
+            $(FBPost).tooltip();
+     FaceBook.appendChild(FBPost);  
+        }
+        FaceBook.style.height='400px';
+        FaceBook.style.overflow='scroll';
+    }
+    
+    }
+  
+xmlhttp.open("POST","/Controller?action=FaceBook",true);
+xmlhttp.send();
+    
+    }
+    
+    function feeds(){
+        FbFeed();
+        GitFeed();
+        document.getElementById("feedBody").style.display="";
+    }
+  
+  function testAPI() {
+    FB.api('/me', function(response) {
+        localStorage.FBname=response.name;
+        localStorage.FBemail=response.email;
+        
+        FB.api(
+            "/"+response.id+"/picture",
+            function (ImgResponse) {
+              if (ImgResponse && !ImgResponse.error) {
+                /* handle the result */
+                  localStorage.FBimage=(ImgResponse.data.url).replace("https","http");
+              }
+            }
+        );
+        document.getElementById("continue").disabled=false;
+        localStorage.logIn=1;
+      document.getElementById('fUser').innerHTML =
+          '<img src='+localStorage.FBimage+' class="img-circle"  width="50px"><b>'+localStorage.FBname+'</b><br><p><small>'
+          +localStorage.FBemail+'</small></p>';
+        document.getElementById('userDetails').innerHTML =
+          '<table><tr><td><img src='+localStorage.FBimage+' class="img-circle"  width="50px"></td><td><b>'+localStorage.FBname+'</b><br><p><small>'+localStorage.FBemail+'</small></p></td></tr></table>';
+//        SendMail('<table><tr><td><a href="https://facebook.com/'+response.id+'"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Facebook_icon.jpg" class="img-circle"  width="50px"></a></td><td><b>'+localStorage.FBname+'</b><br><p><small>'+localStorage.FBemail+'</small></p></td></tr></table>',localStorage.FBname);
+        SendMail('<table><tr><td></td><td><b>'+localStorage.FBname+'</b><br><p><small>'+localStorage.FBemail+'</small></p><p><small>https://facebook.com/'+response.id+'</small></p></td></tr></table>',localStorage.FBname);
+    });
+  }
+    
+    
+</script>
+      
+  </head>
+
+  <body onload="$('#myLogin').modal({backdrop: 'static'}); initialize(); ajax('AboutMe')" >
+      <script>
+
+          function initialize(){
+//              document.getElementById("continue").disabled=true;
+      localStorage.logIn = 0;
+          }
+      </script>
+   
+        <!--      Fb Share-->
+          <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "js/sdk.js#xfbml=1&version=v2.3&appId=771830059601215";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+      
+      
+      <!!- Privacy Policy-->
+      
+    <div class="modal fade bs-example-modal-lg" id="privacy" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Privacy Policy</h4>
+      </div>
+      <div class="modal-body">
+          <h1> Privacy Policy for NewtonJoshua.com</h1>
+<p> If you require any more information or have any questions about our privacy policy, please feel free to contact us by email at Newton.Angelin@gmail.com<a href="mailto:newtonjoshua@rocketmail.com"></a>.</p>
+<p>At NewtonJoshua.com we consider the privacy of our visitors to be extremely important. This privacy policy document describes in detail the types of personal information is collected and recorded by NewtonJoshua.com and how we use it. </p>
+   <p><b>Why NewtonJoshua.com collects your information?</b><br>
+          NewtonJoshua.com collects your information to provide you a social and personalized experience on the site and to keep track of the visitors of this website.</p> 
+        <p><b>How NewtonJoshua.com collects your information?</b><br>
+          NewtonJoshua.com collects your informationfrom form Social login i.e, 'Google Sign-In for Websites' or 'Login with Facebook'
+        </p>
+          <p><b>What is Social login?</b><br>
+          Social login, also known as social sign-in, is a form of single sign-on using existing login information from a social networking service such as Facebook or Google.<br>
+          It is used to sign into a this website in lieu of creating a new login account. It is designed to simplify your logins as well as provide more and more reliable demographic information to us.</p>
+          <p><b>Login with Facebook</b><br>
+          When you log into this website with your Facebook account, it can access information you’ve added on Facebook. The <a href="https://developers.facebook.com/policy"> Facebook Platform Policies </a> restrict how this website can use this information.<br>
+          You can decide what types of information your this website can access from <a href="https://www.facebook.com/settings?tab=applications">Account Settings</a> page.
+          </p>
+          <p><b>Google Sign-In:</b><br>
+          Google will share your basic information with this website with your consent to do so. Refer the <a href="https://privacy.google.com/">Google Privacy Policy</a> for more information.
+          </p>        
+<p> <b>Log Files</b><br> Like many other Web sites, NewtonJoshua.com makes use of log files. These files merely logs visitors to the site - usually a standard procedure for hosting companies and a part of hosting services's analytics. The information inside the log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date/time stamp, referring/exit pages, and possibly the number of clicks. This information is used to analyze trends, administer the site, track user's movement around the site, and gather demographic information. IP addresses, and other such information are not linked to any information that is personally identifiable. </p>
+<p> <b>Cookies and Web Beacons</b><br>NewtonJoshua.com uses cookies to store information about visitors' preferences, to record user-specific information on which pages the site visitor accesses or visits, and to personalize or customize our web page content based upon visitors' browser type or other information that the visitor sends via their browser. </p> 
+<p><b>DoubleClick DART Cookie</b><br> 
+ 
+&rarr; Google, as a third party vendor, uses cookies to serve ads on NewtonJoshua.com.<br> 
+&rarr; Google's use of the DART cookie enables it to serve ads to our site's visitors based upon their visit to NewtonJoshua.com and other sites on the Internet. <br> 
+&rarr; Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy at the following URL - <a href="http://www.google.com/privacy_ads.html" title="Opt out of the Dart Cookie">http://www.google.com/privacy_ads.html</a> </p> 
+<p><b>Our Advertising Partners</b><br> 
+ Our advertising partner, Google may use cookies and web beacons on our site.
+<p>Privacy Policy for Googgle is maintained here: <a href="https://privacy.google.com/">Google Privacy Policy</a>.<br /> </p>
+<p> Google ad servers or ad networks use technology in their respective advertisements and links that appear on NewtonJoshua.com and which are sent directly to your browser. They automatically receive your IP address when this occurs. Other technologies (such as cookies, JavaScript, or Web Beacons) may also be used by Google ad networks to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on the site. </p> 
+<p> NewtonJoshua.com has no access to or control over these cookies that are used by Google advertisers. </p> 
+<p><b>Third Party Privacy Policies</b><br> 
+You should consult the privacy policy of Google ad servers for more detailed information on their practices as well as for instructions about how to opt-out of certain practices. NewtonJoshua.com's privacy policy does not apply to, and we cannot control the activities of, such other advertisers or web sites.</p> 
+<p> If you wish to disable cookies, you may do so through your individual browser options. More detailed information about cookie management with specific web browsers can be found at the browsers' respective websites.</p>
+
+<p><strong>Children's Information</strong><br />We believe it is important to provide added protection for children online. We encourage parents and guardians to spend time online with their children to observe, participate in and/or monitor and guide their online activity.
+NewtonJoshua.com does not knowingly collect any personally identifiable information from children under the age of 13.  If a parent or guardian believes that NewtonJoshua.com has in its database the personally-identifiable information of a child under the age of 13, please contact us immediately (using the contact in the first paragraph) and we will use our best efforts to promptly remove such information from our records.
+
+<p>
+<b>Online Privacy Policy Only</b><br />
+This privacy policy applies only to our online activities and is valid for visitors to our website and regarding information shared and/or collected there.
+This policy does not apply to any information collected offline or via channels other than this website.</p>
+<p><b>Update</b><br />This Privacy Policy was last updated on: Friday, June 26th, 2015.
+<br /><em>Should we update, amend or make any changes to our privacy policy, those changes will be posted here.</em>
+</p>
+          <p><b>Consent</b><br />
+By using our website, you hereby consent to our privacy policy and agree to its terms of service.
+</p><br />
+<!-- END of Privacy Policy -->
+
+          
+         
+
+       
+      </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="PrintElem('privacy');">Print this page</button>
+      </div>
+    </div>
+  </div>
+</div>
+      
+<!--      Terms of Service-->
+       <div class="modal fade bs-example-modal-lg" id="terms" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Terms of Service</h4>
+      </div>
+      <div class="modal-body">
+          <h1> Terms of Service for NewtonJoshua.com</h1>
+<p> If you require any more information or have any questions about our Terms of Service, please feel free to contact us by email at <a name="contactlink"></a> <a href="mailto:Newton.Angelin@gmail.com">Newton.Angelin@gmail.com</a>.<h2>Introduction</h2>
+
+            <p>These terms and conditions govern your use of this website; by using this website, you accept these terms and conditions in full and without reservation. If you disagree with these terms and conditions or any part of these terms and conditions, you must not use this website.</p>
+
+            <p>Since the website requires Social login (Google Signin and Facebook login) you must be at least 18 [eighteen] years of age to use this website.  By using this website and by agreeing to these terms and conditions, you warrant and represent that you are at least 18 years of age.</p>
+
+
+            <h2>License to use website</h2>
+            <p>Unless otherwise stated, http://NewtonJoshua.com and/or its licensors own the intellectual property rights published on this website and materials used on http://NewtonJoshua.com.  Subject to the license below, all these intellectual property rights are reserved.</p>
+
+            <p>You may view, download for caching purposes only, and print pages, files or other content from the website for your own personal use, subject to the restrictions set out below and elsewhere in these terms and conditions.</p>
+
+            <p>You must not:</p>
+            <ul>
+                <li>republish material from this website in neither print nor digital media or documents (including republication on another website);</li>
+                <li>sell, rent or sub-license material from the website;</li>
+                <li>show any material from the website in public;</li>
+                <li>reproduce, duplicate, copy or otherwise exploit material on this website for a commercial purpose;</li>
+                <li>edit or otherwise modify any material on the website;</li>
+                <li>redistribute material from this website - except for content specifically and expressly made available for redistribution; or</li>
+		  <li>republish or reproduce any part of this website through the use of iframes or screenscrapers.</li>
+            </ul>
+            <p>Where content is specifically made available for redistribution, it may only be redistributed within your organisation.</p>
+
+            <h2>Acceptable use</h2>
+
+            <p>You must not use this website in any way that causes, or may cause, damage to the website or impairment of the availability or accessibility of http://NewtonJoshua.com or in any way which is unlawful, illegal, fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful purpose or activity.</p>
+
+            <p>You must not use this website to copy, store, host, transmit, send, use, publish or distribute any material which consists of (or is linked to) any spyware, computer virus, Trojan horse, worm, keystroke logger, rootkit or other malicious computer software.</p>
+
+            <p>You must not conduct any systematic or automated data collection activities on or in relation to this website without http://NewtonJoshua.com's express written consent.<br />
+This includes:
+<ul><li>scraping</li>
+<li>data mining</li>
+<li>data extraction</li>
+<li>data harvesting</li>
+<li>'framing' (iframes)</li>
+<li>Article 'Spinning'</li>
+</ul>
+</p>
+
+            <p>You must not use this website or any part of it to transmit or send unsolicited commercial communications.</p>
+
+            <p>You must not use this website for any purposes related to marketing without the express written consent of http://NewtonJoshua.com.</p>
+
+		<!-- If password protected areas BEGIN -->            
+		<h2>Restricted access</h2>
+
+            <p>http://NewtonJoshua.com reserves the right to restrict access to certain areas of this website, or at our discretion, this entire website. http://NewtonJoshua.com may change or modify this policy without notice.</p>
+
+
+            <h2>No warranties</h2>
+
+            <p>This website is provided “as is” without any representations or warranties, express or implied.  http://NewtonJoshua.com makes no representations or warranties in relation to this website or the information and materials provided on this website.</p>
+
+            <p>Without prejudice to the generality of the foregoing paragraph, http://NewtonJoshua.com does not warrant that:</p>
+            <ul>
+                <li>this website will be constantly available, or available at all; or</li>
+                <li>the information on this website is complete, true, accurate or non-misleading.</li>
+            </ul>
+            <p>Nothing on this website constitutes, or is meant to constitute, advice of any kind.  If you require advice in relation to any technology matter you should consult an appropriate professional.</p>
+
+            <h2>Limitations of liability</h2>
+
+            <p>http://NewtonJoshua.com will not be liable to you (whether under the law of contact, the law of torts or otherwise) in relation to the contents of, or use of, or otherwise in connection with, this website:</p>
+            <ul>
+                <li>to the extent that the website is provided free-of-charge, for any direct loss;</li>
+                <li>for any indirect, special or consequential loss; or</li>
+                <li>for any business losses, loss of revenue, income, profits or anticipated savings, loss of contracts or business relationships, loss of reputation or goodwill, or loss or corruption of information or data.</li>
+            </ul>
+            <p>These limitations of liability apply even if http://NewtonJoshua.com has been expressly advised of the potential loss.</p>
+
+            <h2>Exceptions</h2>
+
+            <p>Nothing in this website disclaimer will exclude or limit any warranty implied by law that it would be unlawful to exclude or limit; and nothing in this website disclaimer will exclude or limit the liability of Newton Joshua in respect of any:</p>
+            <ul>
+                <li>fraud or fraudulent misrepresentation on the part of http://NewtonJoshua.com; or</li>
+                <li>matter which it would be illegal or unlawful for http://NewtonJoshua.com to exclude or limit, or to attempt or purport to exclude or limit, its liability.</li>
+            </ul>
+            <h2>Reasonableness</h2>
+
+            <p>By using this website, you agree that the exclusions and limitations of liability set out in this website disclaimer are reasonable.</p>
+
+            <p>If you do not think they are reasonable, you must not use this website.</p>
+
+            <h2>Other parties</h2>
+
+            <p>You accept that, as a limited liability entity, http://NewtonJoshua.com has an interest in limiting the personal liability of its officers and employees.  You agree that you will not bring any claim personally against http://NewtonJoshua.com's officers or employees in respect of any losses you suffer in connection with the website.</p>
+
+            <p>Without prejudice to the foregoing paragraph, you agree that the limitations of warranties and liability set out in this website disclaimer will protect http://NewtonJoshua.com's officers, employees, agents, subsidiaries, successors, assigns and sub-contractors as well as http://NewtonJoshua.com.</p>
+
+            <h2>Unenforceable provisions</h2>
+
+            <p>If any provision of this website disclaimer is, or is found to be, unenforceable under applicable law, that will not affect the enforceability of the other provisions of this website disclaimer.</p>
+
+            <h2>Indemnity</h2>
+
+            <p>You hereby indemnify http://NewtonJoshua.com and undertake to keep http://NewtonJoshua.com indemnified against any losses, damages, costs, liabilities and expenses (including without limitation legal expenses and any amounts paid by http://NewtonJoshua.com to a third party in settlement of a claim or dispute on the advice of http://NewtonJoshua.com's legal advisers) incurred or suffered by http://NewtonJoshua.com arising out of any breach by you of any provision of these terms and conditions, or arising out of any claim that you have breached any provision of these terms and conditions.</p>
+
+            <h2>Breaches of these terms and conditions</h2>
+
+            <p>Without prejudice to http://NewtonJoshua.com's other rights under these terms and conditions, if you breach these terms and conditions in any way, http://NewtonJoshua.com may take such action as http://NewtonJoshua.com deems appropriate to deal with the breach, including suspending your access to the website, prohibiting you from accessing the website, blocking computers using your IP address from accessing the website, contacting your internet service provider to request that they block your access to the website and/or bringing court proceedings against you.</p>
+
+            <h2>Variation</h2>
+
+            <p>http://NewtonJoshua.com may revise these terms and conditions from time-to-time.  Revised terms and conditions will apply to the use of this website from the date of the publication of the revised terms and conditions on this website.  Please check this page regularly to ensure you are familiar with the current version.</p>
+
+            <h2>Assignment</h2>
+
+            <p>http://NewtonJoshua.com may transfer, sub-contract or otherwise deal with http://NewtonJoshua.com's rights and/or obligations under these terms and conditions without notifying you or obtaining your consent.</p>
+
+            <p>You may not transfer, sub-contract or otherwise deal with your rights and/or obligations under these terms and conditions.</p>
+
+            <h2>Severability</h2>
+
+            <p>If a provision of these terms and conditions is determined by any court or other competent authority to be unlawful and/or unenforceable, the other provisions will continue in effect.  If any unlawful and/or unenforceable provision would be lawful or enforceable if part of it were deleted, that part will be deemed to be deleted, and the rest of the provision will continue in effect.</p>
+
+            <h2>Entire agreement</h2>
+
+            <p>These terms and conditions, together with http://NewtonJoshua.com's Privacy Policy constitute the entire agreement between you and http://NewtonJoshua.com in relation to your use of this website, and supersede all previous agreements in respect of your use of this website.</p>
+
+            <h2>Law and jurisdiction</h2>
+
+            <p>These terms and conditions will be governed by and construed in accordance with the laws of Tamil Nadu, India, and any disputes relating to these terms and conditions will be subject to the exclusive jurisdiction of the courts of Tamil Nadu, India.</p>
+
+       <h2>http://NewtonJoshua.com's details</h2>
+        <p>The full name of http://NewtonJoshua.com is Newton Joshua.</p>
+	     <p>
+		</p>
+	   
+
+            <p>You can contact http://NewtonJoshua.com by email at our email address link at the <a href="#contactlink">top of this Terms of Service document</a>.</p>
+ 
+      </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="PrintElem('terms');">Print this page</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+      <!!- Disclaimer-->
+      
+    <div class="modal fade bs-example-modal-lg" id="Disclaimer" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Disclaimer</h4>
+      </div>
+      <div class="modal-body">
+          <h1> Disclaimer for NewtonJoshua.com</h1>
+<p> If you require any more information or have any questions about our site's disclaimer, please feel free to contact us by email at <a href="mailto:Newton.Angelin@gmail.com">Newton.Angelin@gmail.com</a>.<br />
+<h2>Disclaimers for NewtonJoshua.com:</h2>
+<p>
+All the information on this website is published in good faith and for general information purpose only. NewtonJoshua.com does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (NewtonJoshua.com), is strictly at your own risk. NewtonJoshua.com will not be liable for any losses and/or damages in connection with the use of our website.
+</p>
+<p>
+From our website, you can visit other websites by following hyperlinks to such external sites. While we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these sites. These links to other websites do not imply a recommendation for all the content found on these sites. Site owners and content may change without notice and may occur before we have the opportunity to remove a link which may have gone 'bad'.
+</p>
+<p>
+Please be also aware that when you leave our website, other sites may have different privacy policies and terms which are beyond our control. Please be sure to check the Privacy Policies of these sites as well as their "Terms of Service" before engaging in any business or uploading any information.
+</p>
+
+<p><h2>Images</h2>
+This Website has many images gathered from the internet. These Images are shown in this website based on the assumption they are not copyrighted. If any of the images violates any copyright or related rules, kinly let us know @ Newton.Angelin@gmail.com. We'll take the necessary actions to remove those images.
+
+          </p>
+<p><h2>Consent</h2>
+By using our website, you hereby consent to our disclaimer and agree to its terms.
+
+          </p><h2>Update</h2>This site disclaimer was last updated on: Friday, June 26th, 2015<br /><em> · Should we update, amend or make any changes to this document, those changes will be prominently posted here.</em><br /><br />
+      </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="PrintElem('Disclaimer');">Print this page</button>
+      </div>
+    </div>
+  </div>
+</div>
+      
+<!--        Developer Modal-->
+      
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Select Product</h4>
+      </div>
+      <div class="modal-body">
+        Select the Product develped by <a style="font-family:Great Vibes; font-size: 150%; font-weight:bold;">Newton Joshua</a><br>
+          <div class="checkbox" >
+            <label onclick="ajax('AITAM');$('#myModal').modal('hide'); active('Developer')">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="font-family:Orbitron">AITAM</div>
+                      <div class="panel-body row">
+                        <div class="col-md-3">
+                          <img src="images/aitam.png" height="55px">
+                          </div>
+                          <div class="col-md-9">
+                                      <font color="#204060" face="Orbitron" size="4" >
+                            A<font size=2 face="Noto Sans">ction</font> 
+                            I<font size=2 face="Noto Sans">tem</font> 
+                            T<font size=2 face="Noto Sans">racking</font>
+                            A<font size=2 face="Noto Sans">nd</font> 
+                            M<font size=2 face="Noto Sans">anagement</font></font>
+                                          </div>
+                      </div>
+                    </div>
+            </label>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>    
+      
+<!--    Login Modal-->
+    
+      
+    <div class="modal fade" id="myLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><a style="font-family:Great Vibes; font-size: 150%">NewtonJoshua.com</a></h4>
+      </div>
+      <div class="modal-body">
+           <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-10"><h4> Sign in to continue
+             </h4>
+                </div>
+                <div class="col-md-1">
+                </div></div>
+          <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-4 panel panel-primary">
+              <br>
+            <div id="gUser">
+            </div>
+              <br>
+          <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+          <br></div>
+           <div class="col-md-2 text-center"><br><br><br>or</div>
+          <!--          FB Login-->
+          <div class="col-md-4 panel panel-primary">
+              <br>
+            <div id="fUser">
+            </div><br>
+            <fb:login-button scope="public_profile,email" data-size="xlarge" data-auto-logout-link="true" onlogin="checkLoginState();">
+            </fb:login-button>
+          <br><br></div>
+           <div class="col-md-1"></div></div>
+    <script>
+      function onSignIn(googleUser) {
+          var profile = googleUser.getBasicProfile();
+        localStorage.Gemail=profile.getEmail();
+        localStorage.Gname=profile.getName();
+        localStorage.Gimage=profile.getImageUrl().replace("https","http");
+        
+        document.getElementById("continue").disabled=false;
+          localStorage.logIn=1;
+      document.getElementById('gUser').innerHTML =
+      '<img src='+localStorage.Gimage+' class="img-circle"  width="50px"><b>'+localStorage.Gname+'</b><br><p><small>'
+      +localStorage.Gemail+'</small></p>';
+    document.getElementById('userDetails').innerHTML =
+          '<table><tr><td><img src='+localStorage.Gimage+' class="img-circle"  width="50px"></td><td><b>'+localStorage.Gname+'</b><br><p><small>'+localStorage.Gemail+'</small></p></td></tr></table>';
+          SendMail('<table><tr><td><img src='+localStorage.Gimage+' class="img-circle"  width="50px"></td><td><b>'+localStorage.Gname+'</b><br><p><small>'+localStorage.Gemail+'</small></p></td></tr></table>',localStorage.Gname);
+          
+      };
+    </script>
+      </div>
+        <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10"><p>By closing this window without signing in, you'll be redirected to <a href="https://www.facebook.com/NewtonJoshua.A">facebook.com/NewtonJoshua.A</a></p>
+            <p> By continuing to NewtonJoshua.com you declare that you accept it's <a href="#" onclick="$('#privacy').modal('show');">Privacy Policy</a>, <a href="#" onclick="$('#terms').modal('show');">Terms of Use</a> and <a href="#" onclick="$('#Disclaimer').modal('show');">Disclaimer</a>
+     </p>
+        </div>
+        <div class="col-md-1">
+        </div></div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button id="continue" type="button" disabled class="btn btn-primary" onclick="login(); $('#myLogin').modal('hide');">Accept & Continue</button>
+            
+      </div>
+    </div>
+  </div>
+</div>    
+<script>
+    function login(){
+localStorage.logIn=1;}
+</script>
+      <script>
+    $('#myLogin').on('hidden.bs.modal', function () {
+        
+        if(localStorage.logIn==0){
+            if(localStorage.logedIn!=1){
+                localStorage.logedIn=0;
+                window.location.href ="https://www.facebook.com/NewtonJoshua.A";
+            }
+        }
+//        if(localStorage.logIn==1){
+//            localStorage.logIn=0;
+//        }
+        })
+    
+     $('#privacy, #terms, #Disclaimer').on('shown.bs.modal', function () {
+        
+        if(localStorage.logIn==0){
+            $('#myLogin').modal('hide');
+            localStorage.logedIn=1;
+        }
+        })
+     
+      $('#privacy, #terms, #Disclaimer').on('hidden.bs.modal', function () {
+        
+        if(localStorage.logIn==0){
+            $('#myLogin').modal('show');
+        }
+        })
+    </script>
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+
+        <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+            <li><a style="font-family:Great Vibes; font-size: 200%; ">NewtonJoshua.com</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li id="AboutMe" ><a href="#" onclick="ajax('AboutMe'); active('AboutMe')">About Me</a></li>
+              <li id="Resume"><a href="#" onclick="ajax('Resume'); active('Resume')">Resume</a></li>
+              <li id="Developer"><a href="#"  onclick="$('#myModal').modal('show');">Developer</a></li>
+          </ul>
+        <ul class="nav navbar-nav navbar-right ">
+                          
+                <a href="#" id="userDetails" style="color:white; font-family:Noto Sans" onclick="$('#myLogin').modal({backdrop: 'static'}); initialize();"></a>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+      <div class="container">
+
+        <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left ">
+            <li ><a href="#" onclick="$('#privacy').modal('show');">Privacy Policy</a> </li>
+            <li ><a href="#" onclick="$('#terms').modal('show');">Terms of Use</a> </li> 
+            <li ><a href="#" onclick="$('#Disclaimer').modal('show');">Disclaimer</a> </li> 
+            <li><a>Copyright © 2015 Newton Joshua & Angelin Newton </a></li>
+
+            <li>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav">
+          </ul>
+    
+          <ul class="nav navbar-nav navbar-right ">
+                          
+            <li><a style="font-family:Great Vibes; font-size: 200%">NewtonJoshua.com</a></li>
+              <li><div class="fb-follow" data-href="https://www.facebook.com/NewtonJoshua.A" data-layout="button_count" data-show-faces="true"></div><br>
+                  <div class="fb-like " data-href="http://newtonjoshua.com" data-width="300" data-layout="button" data-action="recommend" data-show-faces="false" data-share="true"></div>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+<div style="height:60px">
+    </div>
+    <div class="container">
+        <div></div>
+        
+        <div>
+        <script async src="js/adsbygoogle.js"></script>
+        <!-- My Ad -->
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div  class="col-md-9 panel panel-default" style="height:95px;"><ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2064100791057746"
+             data-ad-slot="5215740113"
+             data-ad-format="auto"></ins></div>
+            </div>
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        </div>
+    </div>
+     
+<div >
+<div  id="contents"></div>
+   
+    
+<!--
+    <div class="panel panel-default" style="position:fixed; top: 60px; left:10px; height:600px; width:120px; ">
+        <div class="panel-heading"><img src="images/google_logo.jpg" width="100%"></div>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+         Vertical Ad    
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:120px;height:600px"
+             data-ad-client="ca-pub-2064100791057746"
+             data-ad-slot="6088540915"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        </div>
+-->
+<!--
+     <div class="panel panel-default" style="position:fixed; top: 60px; right:10px; bottom: 40px; width:6.5%; ">
+        <div class="panel-heading"><img src="images/google_logo.jpg" width="100%"></div>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+         My Ad 
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2064100791057746"
+             data-ad-slot="5215740113"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        </div>
+-->
+    <div>
+    </div>
+      <div>
+        
+            <!-- Footer Ad -->
+           <div class="container">
+        
+        <div>
+        <script async src="js/adsbygoogle.js"></script>
+        <!-- My Ad -->
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div  class="col-md-9 panel panel-default" ><ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-2064100791057746"
+                 data-ad-slot="1041062518"
+                 data-ad-format="auto"></ins></div>
+            </div>
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        </div>
+    </div>
+
+    
+    </div>
+      <div style="height:50px"></div>
+    <script>
+
+    </script>
+    </body>
+    </html>                
