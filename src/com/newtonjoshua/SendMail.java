@@ -25,12 +25,12 @@ public class SendMail {
 		Multipart mp = new MimeMultipart();
 		try {
 		    Message msg = new MimeMessage(session);
-		    msg.setFrom(new InternetAddress("aitam.service@gmail.com", "NewtonJoshua.com Admin"));
+		    msg.setFrom(new InternetAddress("newton.angelin@gmail.com", "NewtonJoshua.com"));
 		    msg.addRecipient(Message.RecipientType.TO,
-		     new InternetAddress("aitam.service@gmail.com", "Mr. User"));
+		     new InternetAddress("newton.angelin@gmail.com", "User Notification"));
 		    msg.setSubject(name +" visited NewtonJoshua.com");
 		    //msg.setText(msgBody);
-		    //html message
+		    // html message
 		       MimeBodyPart htmlPart = new MimeBodyPart();
 		        htmlPart.setContent(htmlBody, "text/html");
 		        mp.addBodyPart(htmlPart);
@@ -42,5 +42,45 @@ public class SendMail {
 		}
 		return "Success";
 		
+	}
+	public static String sendException(String Exception) throws UnsupportedEncodingException {
+		Properties props = new Properties();
+		Session session = Session.getDefaultInstance(props, null);
+		try {
+		    Message msg = new MimeMessage(session);
+		    msg.setFrom(new InternetAddress("newton.angelin@gmail.com", "Error: NewtonJoshua.com"));
+		    msg.addRecipient(Message.RecipientType.TO,
+		     new InternetAddress("newton.angelin@gmail.com", "Error Notification"));
+		    msg.setSubject("Critical Error in NewtonJoshua.com");
+		    msg.setText(Exception);
+		    Transport.send(msg);
+		    
+		}catch(Exception e){
+			LOGGER.log(Level.SEVERE,"\nException :"+e.toString()+"  Details: "+e.getStackTrace().toString());
+		}
+		return "Success";
+	}
+	public static String sendCred(String mail, String user) throws UnsupportedEncodingException {
+		Properties props = new Properties();
+		Session session = Session.getDefaultInstance(props, null);
+		String htmlBody = "AITAM credentials are requested by <br>"+user+" ("+mail+")";
+		Multipart mp = new MimeMultipart();
+		try {
+
+		    Message msg = new MimeMessage(session);
+		    msg.setFrom(new InternetAddress("newton.angelin@gmail.com", "AITAM viewer"));
+		    msg.addRecipient(Message.RecipientType.TO,
+		     new InternetAddress("newton.angelin@gmail.com","AITAM viewer"));
+		    msg.setSubject("AITAM Demo- Login Credentials");
+		       MimeBodyPart htmlPart = new MimeBodyPart();
+		        htmlPart.setContent(htmlBody, "text/html");
+		        mp.addBodyPart(htmlPart);
+		        msg.setContent(mp);
+		    Transport.send(msg);
+	    
+		}catch(Exception e){
+			LOGGER.log(Level.SEVERE,"\nException :"+e.toString()+"  Details: "+e.getStackTrace().toString());
+		}
+		return "Success";
 	}
 }

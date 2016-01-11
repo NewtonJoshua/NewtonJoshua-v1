@@ -14,6 +14,8 @@ import org.json.JSONObject;
 
 
 
+
+
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -53,24 +55,26 @@ public class Controller extends HttpServlet {
 			res=FB_Posts.facebook();
 		}
 				
-		//Resume
-		if(action.equals("Resume")){
+		//Captcha- AITAM Cred
+		if(action.equals("Captcha")){
+			String recap= request.getParameter("response");
+			String result=ReCaptcha.verify(recap);
+			if(result.equalsIgnoreCase("true}")){
+				String mail=request.getParameter("mail");
+				String user=request.getParameter("user");
+				String r=SendMail.sendCred(mail, user);
+				res.put("Captcha", r);
+			}
+			
 		}
 		
-		//AITAM
-		if(action.equals("AITAM")){
-		}
-		
-		//Demo
-		if(action.equals("Demo")){
-		}
-		
-		//Code
-		if(action.equals("Code")){
-		}
+
+
 		}
 		catch(Exception e){
 			LOGGER.log(Level.SEVERE,"\nException :"+e.toString()+"  Details: "+e.getStackTrace().toString());
+			String Exc=e.toString()+" : "+ e.getStackTrace().toString();
+			SendMail.sendException(Exc);
 		}
 		LOGGER.log(Level.SEVERE,action+" : "+ res.toString());
 		response.getWriter().write(res.toString());

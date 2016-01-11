@@ -11,7 +11,7 @@
                     <div class="panel-heading" style="font-family:Orbitron">AITAM</div>
                       <div class="panel-body row">
                         <div class="col-md-3">
-                          <img src="images/aitam.png" height="55px">
+                          <img src="images/aitam.png" width="100%">
                           </div>
                           <div class="col-md-9">
                                       <font color="#204060" face="Orbitron" size="4" >
@@ -97,6 +97,7 @@
   </ul>
 -->
 </li>
+<!--
 <li>
   <a href="#Scratch">From the Scratch</a>
   <ul class="nav">
@@ -106,8 +107,9 @@
       <li><a href="#ScratchExtension">Extension</a></li>
   </ul>
 </li>
+-->
 <li>
-  <a href="#long">How long it took?</a>
+  <a href="#time">How long it took?</a>
 </li>
           
             </ul>
@@ -117,8 +119,8 @@
           <div class="panel panel-primary" style="position:fixed ;  width:18.1%;z-index : 1">
                                          <div class="panel-body row">
 
-                                    <a href="#" class="btn btn-primary btn-sm col-md-6" role="button" >Try it</a>
-                                    <a href="#" class="btn btn-primary btn-sm col-md-6" role="button">Code it</a></div>
+                        <a href="#" onclick="$('#myTry').modal('show');" class="btn btn-primary btn-sm col-md-6" role="button" >Try it</a>
+                        <a href="#" onclick="$('#myCode').modal('show');" class="btn btn-primary btn-sm col-md-6" role="button">Code it</a></div>
 
 </div>
           </nav>
@@ -147,7 +149,7 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                     <div class="panel-heading" style="font-family:Orbitron">AITAM</div>
                       <div class="panel-body row">
                         <div class="col-md-3">
-                          <img src="images/aitam.png" height="55px">
+                          <img src="images/aitam.png" width="100%">
                           </div>
                           <div class="col-md-9">
                                       <font color="#204060" face="Orbitron" size="4" >
@@ -471,7 +473,7 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
            Wow! That's a compelling invitation. Let's try AITAM and understand how to utilize it's functinalities.
       </p>
     
-    <a href="#" class="btn btn-info btn-sm col-md-3" role="button" >Try it</a>
+    <a href="#" onclick="$('#myTry').modal('show');"  class="btn btn-info btn-sm col-md-3" role="button" >Try it</a>
     </div>
       <h2 class="navbar navbar-default" id="TryWebApp">Web App</h2>
  <div class="bs-callout bs-callout-info row" >
@@ -667,10 +669,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
      <div >    
     <h4>Team Tree</h4>
     <p><br>
-        <i>View your</i> <a style="font-family:Orbitron">AITAM </a> <i>generated Performance analysis chart</i>
-        <br>Select the duration to analyse your performance and clik on 'Enlighten Me' button to generate the myPerfometer chart.
-        You can zoom in the chart and traverse sidewise.<br>
-        The overall Perfometer rating for the selected duration will be displayed in a guage.
+        <i>View your Team, structured as a tree</i>
+        <br>Your Immediate supervisor, and your team members will be displayed in the form of a tree.
          </p>
     </div>
         <div  align="center">
@@ -869,8 +869,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
           </div>
           <div class="col-md-4">
               <img src="images/gcp-logo.png" width="100%"> <br></br>
-    <a href="https://cloud.google.com/" class="btn btn-info btn-sm " role="button">Overview</a>
-    <a href="https://cloud.google.com/docs/" class="btn btn-info btn-sm " role="button">Documentation</a>
+    <a target="_blank" href="https://cloud.google.com/" class="btn btn-info btn-sm " role="button">Overview</a>
+    <a target="_blank" href="https://cloud.google.com/docs/" class="btn btn-info btn-sm " role="button">Documentation</a>
           </div>
       </div> 
   <!--   <h2 class="navbar navbar-default" id="GoogleAppEngine">Google App Engine</h2> -->
@@ -884,8 +884,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
           </div>
           <div class="col-md-4">
               <img src="images/google-app-engine.jpg" width="100%"> <br></br>
-    <a href="https://cloud.google.com/appengine/" class="btn btn-info btn-sm " role="button">Overview</a>
-    <a href="https://cloud.google.com/appengine/docs" class="btn btn-info btn-sm " role="button">Documentation</a>
+    <a target="_blank" href="https://cloud.google.com/appengine/" class="btn btn-info btn-sm " role="button">Overview</a>
+    <a target="_blank" href="https://cloud.google.com/appengine/docs" class="btn btn-info btn-sm " role="button">Documentation</a>
           </div>
       </div>
   <!--   <h2 class="navbar navbar-default" id="GoogleCloudSQL">Google Cloud SQL</h2> -->
@@ -901,8 +901,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                       </div>
                       <div class="col-md-4">
                           <img src="images/google_cloud.jpg" width="100%"> <br></br>
-                <a href="https://cloud.google.com/sql/" class="btn btn-info btn-sm " role="button">Overview</a>
-                <a href="https://cloud.google.com/sql/docs/introduction" class="btn btn-info btn-sm " role="button">Documentation</a>
+                <a target="_blank" href="https://cloud.google.com/sql/" class="btn btn-info btn-sm " role="button">Overview</a>
+                <a target="_blank" href="https://cloud.google.com/sql/docs/introduction" class="btn btn-info btn-sm " role="button">Documentation</a>
                       </div>
                   </div>
   <!--   <h2 class="navbar navbar-default" id="GoogleCloudLogging">Google Cloud Logging</h2> -->
@@ -919,8 +919,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                   </div>
                   <div class="col-md-4">
                       <img src="images/logging.jpg" width="100%"> <br></br>
-            <a href="https://cloud.google.com/logging/docs/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://cloud.google.com/logging/docs/" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://cloud.google.com/logging/docs/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://cloud.google.com/logging/docs/" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--   <h2 class="navbar navbar-default" id="MySQLConnector">MySQL Workbench</h2> -->
@@ -935,8 +935,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                   </div>
                   <div class="col-md-4">
                       <img src="images/logo-mysql.png" width="100%"> <br></br>
-            <a href="http://www.mysql.com/products/workbench/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://cloud.google.com/sql/docs/admin-tools#workbench" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="http://www.mysql.com/products/workbench/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://cloud.google.com/sql/docs/admin-tools#workbench" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--  <h2 class="navbar navbar-default" id="Eclipse">Eclipse</h2>-->
@@ -952,8 +952,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                   </div>
                   <div class="col-md-4">
                       <img src="images/Eclipse-logo.jpg" width="100%"> <br></br>
-            <a href="https://eclipse.org/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://cloud.google.com/appengine/docs/java/tools/eclipse" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://eclipse.org/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://cloud.google.com/appengine/docs/java/tools/eclipse" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--   <h2 class="navbar navbar-default" id="Java">Java</h2> -->
@@ -970,8 +970,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                   <div class="col-md-4" >
                       <div  align="center">
                           <img src="images/java-color.png" width="50%"> </div><br></br>
-            <a href="http://docs.oracle.com/javaee/6/tutorial/doc/geysj.html" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://cloud.google.com/appengine/docs/java/" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="http://docs.oracle.com/javaee/6/tutorial/doc/geysj.html" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://cloud.google.com/appengine/docs/java/" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--   <h2 class="navbar navbar-default" id="JavaScript">JavaScript</h2> -->
@@ -989,8 +989,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                   <div class="col-md-4">
                       <div  align="center">
                           <img src="images/js-logo.png" width="80%"> </div> <br></br>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="http://www.w3schools.com/js/" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="http://www.w3schools.com/js/" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
 
@@ -1009,8 +1009,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                   <div class="col-md-4">
                       <div  align="center">
                           <img src="images/cors-context.jpg" width="100%"> </div> <br></br>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="http://enable-cors.org/server_appengine.html" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="http://enable-cors.org/server_appengine.html" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--   <h2 class="navbar navbar-default" id="Serialization">Serialization</h2> -->
@@ -1028,8 +1028,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                   <div class="col-md-4">
                       <div  align="center">
                           <img src="images/serialization.jpg" width="100%"> </div> <br></br>
-            <a href="https://docs.oracle.com/javase/tutorial/jndi/objects/serial.html" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://docs.oracle.com/javase/tutorial/jndi/objects/serial.html" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--   <h2 class="navbar navbar-default" id="GoogleAnalytics">Google Analytics</h2> -->
@@ -1050,8 +1050,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                       <div  align="center">
                           <img src="images/analytics_64dp.png" width="20%"> <br><br>
                           <img src="images/Google_Analytics_logo.png" width="100%"> </div> <br></br>
-            <a href="http://www.google.com/analytics/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://developers.google.com/analytics/" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="http://www.google.com/analytics/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://developers.google.com/analytics/" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
    <!--  <h2 class="navbar navbar-default" id="GoogleCharts">Google Charts</h2> -->
@@ -1071,8 +1071,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                       <div  align="center">
                           <img src="images/summary.jpg" width="100%"> <br><br>
                           <img src="images/perfometer.jpg" width="100%"> </div> <br></br>
-            <a href="https://developers.google.com/chart/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://developers.google.com/chart/interactive/docs/" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://developers.google.com/chart/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://developers.google.com/chart/interactive/docs/" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--   <h2 class="navbar navbar-default" id="GooglereCAPTCHA">Google reCAPTCHA</h2> -->
@@ -1091,8 +1091,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                   <div class="col-md-4">
                       <div  align="center">
                           <img src="images/recaptcha-demo.gif" width="100%"> </div> <br></br>
-            <a href="https://www.google.com/recaptcha/intro/index.html" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://developers.google.com/recaptcha/intro" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://www.google.com/recaptcha/intro/index.html" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://developers.google.com/recaptcha/intro" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--   <h2 class="navbar navbar-default" id="PhoneGap">PhoneGap </h2> -->
@@ -1110,8 +1110,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                   <div class="col-md-4">
                       <div  align="center">
                           <img src="images/cordova_bot.png" width="80%"> </div> <br></br>
-            <a href="http://phonegap.com/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="http://cordova.apache.org/docs/en/5.0.0/" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="http://phonegap.com/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="http://cordova.apache.org/docs/en/5.0.0/" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--  <h2 class="navbar navbar-default" id="HTML5">HTML5</h2> -->
@@ -1129,8 +1129,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                   <div class="col-md-4">
                       <div  align="center">
                           <img src="images/HTML5_Logo_128.png" width="80%"> </div> <br></br>
-            <a href="http://www.w3.org/TR/html5/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="http://www.w3.org/TR/html5/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--  <h2 class="navbar navbar-default" id="CSS3">CSS3</h2> -->
@@ -1148,8 +1148,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                   <div class="col-md-4">
                       <div  align="center">
                           <img src="images/css3-logo.png" width="80%"> </div> <br></br>
-            <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://developer.mozilla.org/en/docs/Web/CSS/CSS3" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/CSS3" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
 
@@ -1168,8 +1168,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                   <div class="col-md-4">
                       <div  align="center">
                           <img src="images/saas.png" width="80%"> </div> <br></br>
-            <a href="http://sass-lang.com/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="http://ionicframework.com/docs/cli/sass.html" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="http://sass-lang.com/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="http://ionicframework.com/docs/cli/sass.html" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--   <h2 class="navbar navbar-default" id="IonicFramework">IonicFramework</h2> -->
@@ -1187,8 +1187,8 @@ AITAM is developed in an effort to learn/refresh the concepts of Java (Java EE W
                   <div class="col-md-4">
                       <div  align="center">
                           <img src="images/Ionic_Logo.svg.png" width="80%"> </div> <br></br>
-            <a href="http://ionicframework.com/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="http://ionicframework.com/docs/" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="http://ionicframework.com/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="http://ionicframework.com/docs/" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--   <h2 class="navbar navbar-default" id="AngularJS">AngularJS</h2> -->
@@ -1207,8 +1207,8 @@ It provides a framework for client-side model–view–controller (MVC) and mode
                   <div class="col-md-4">
                       <div  align="center">
                           <img src="images/AngularJS-large.png" width="100%"> </div> <br></br>
-            <a href="https://angularjs.org/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://docs.angularjs.org/guide" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://angularjs.org/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://docs.angularjs.org/guide" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
 
@@ -1227,8 +1227,8 @@ Brackets is a lightweight, yet powerful, modern text editor.Visual tools are ble
                   <div class="col-md-4">
                       <div  align="center">
                           <img src="images/Brackets_Icon.svg.png" width="50%"> </div> <br></br>
-            <a href="https://angularjs.org/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://docs.angularjs.org/guide" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://angularjs.org/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://docs.angularjs.org/guide" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--   <h2 class="navbar navbar-default" id="GenyMotion">GenyMotion</h2> -->
@@ -1247,8 +1247,8 @@ It offers 20 pre-configured devices and you can create your own custom ones. You
                       <div  align="center">
                           <img src="images/genymotion_for_developpers.png" width="30%"><br>
                           <img src="images/genymotion.png" width="100%"> </div> <br></br>
-            <a href="https://www.genymotion.com/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://www.genymotion.com/#!/developers" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://www.genymotion.com/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://www.genymotion.com/#!/developers" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
 
@@ -1268,8 +1268,8 @@ An xcodeproj file will be created by the Cordova platform. You can open it with 
                       <div  align="center">
                           <img src="images/xcode-logo.png" width="30%"><br>
                           <img src="images/Apple_Developer_(logo).png" width="60%"> </div> <br></br>
-            <a href="https://developer.apple.com/xcode/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://cordova.apache.org/docs/en/3.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://developer.apple.com/xcode/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://cordova.apache.org/docs/en/3.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
 
@@ -1288,8 +1288,8 @@ It helps to share your Ionic apps with clients, customers, and testers all aroun
                   <div class="col-md-4">
                       <div  align="center">
                           <img src="images/ionicview-logo.png" width="100%"> </div> <br></br>
-            <a href="http://view.ionic.io/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="http://view.ionic.io/" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="http://view.ionic.io/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="http://view.ionic.io/" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--   <h2 class="navbar navbar-default" id="IonicPush">Ionic Push</h2> -->
@@ -1305,8 +1305,8 @@ It helps to share your Ionic apps with clients, customers, and testers all aroun
                   <div class="col-md-4">
                       <div  align="center">
                           <img src="images/ionicpush.png" width="100%"> </div> <br></br>
-            <a href="https://apps.ionic.io/landing/push" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="http://docs.ionic.io/v1.0/docs/push-from-scratch" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://apps.ionic.io/landing/push" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="http://docs.ionic.io/v1.0/docs/push-from-scratch" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--   <h2 class="navbar navbar-default" id="gcm">Google Cloud Messaging</h2> -->
@@ -1324,8 +1324,8 @@ It helps to share your Ionic apps with clients, customers, and testers all aroun
                       <div  align="center">
                           <img src="images/gcm_logo.svg" width="30%" style="background-color:#428bca"><br>
                           <img src="images/google_cloud_messaging.png" width="100%"> </div> <br></br>
-            <a href="https://developers.google.com/cloud-messaging/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://developers.google.com/cloud-messaging/gcm" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://developers.google.com/cloud-messaging/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://developers.google.com/cloud-messaging/gcm" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
 
@@ -1345,8 +1345,8 @@ It helps to share your Ionic apps with clients, customers, and testers all aroun
                           <img src="images/chrome-web.png" width="50%"><br>
                           <img src="images/chrome-logo_2x.png" width="100%">
                            </div> <br></br>
-            <a href="https://developer.chrome.com/extensions" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://developer.chrome.com/extensions/devguide" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://developer.chrome.com/extensions" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://developer.chrome.com/extensions/devguide" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div> 
   <!--   <h2 class="navbar navbar-default" id="UUID">UUID</h2> -->
@@ -1368,8 +1368,8 @@ For human-readable display, many systems use a canonical format using hexadecima
                       <div  align="center" class="bs-example" data-example-id="simple-em">
                           123e4567-e89b-12d3-a456-426655440000
                            </div> <br></br>
-            <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="http://developer.android.com/reference/java/util/UUID.html" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Universally_unique_identifier" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="http://developer.android.com/reference/java/util/UUID.html" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--   <h2 class="navbar navbar-default" id="Fingerprinting">Fingerprinting</h2> -->
@@ -1392,8 +1392,8 @@ Browser is queried its agent string, screen color depth, language, installed plu
                           
                           
                            </div> <br></br>
-            <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="http://developer.android.com/reference/java/util/UUID.html" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Universally_unique_identifier" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="http://developer.android.com/reference/java/util/UUID.html" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--   <h2 class="navbar navbar-default" id="DomainRegistration">Domain Registration</h2> -->
@@ -1414,8 +1414,8 @@ Registration of a domain name establishes a set of Start of Authority (SOA) reco
                           <img src="images/yahoo-logo-purple-1024x688.jpg" width="50%" ><br>
                           <img src="images/header-sprite_1.0.gif" width="100%" style="background-color:#428bca">
                            </div> <br></br>
-            <a href="https://en.wikipedia.org/wiki/Domain_registration" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://in.business.yahoo.com/domain-name-registration/" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Domain_registration" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://in.business.yahoo.com/domain-name-registration/" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
   <!--   <h2 class="navbar navbar-default" id="CustomDomain">Custom Domain</h2> -->
@@ -1438,12 +1438,13 @@ When you create an application with Google App Engine, the app is automatically 
                           
                           <img src="images/webmaster.png" width="100%" ><br>
                            </div> <br></br>
-            <a href="https://www.google.com/webmasters/" class="btn btn-info btn-sm " role="button">Overview</a>
-            <a href="https://cloud.google.com/appengine/docs/domain" class="btn btn-info btn-sm " role="button">Documentation</a>
+            <a target="_blank" href="https://www.google.com/webmasters/" class="btn btn-info btn-sm " role="button">Overview</a>
+            <a target="_blank" href="https://cloud.google.com/appengine/docs/domain" class="btn btn-info btn-sm " role="button">Documentation</a>
                   </div>
               </div>
     </div>
       </div>
+<!--
 <div class="panel panel-primary">
 <div class="panel-heading heading" id="Scratch">From the Scratch
 </div>
@@ -1499,20 +1500,40 @@ When you create an application with Google App Engine, the app is automatically 
       </p>
     </div>
 </div>
+-->
 <div class="panel panel-primary">
-<div class="panel-heading heading" id="Understanding">How long it took?
+<div class="panel-heading heading" id="time">How long it took?
 </div>
 <div class="panel-body"> 
          <div class="bs-callout bs-callout-info row" >
      <div class="col-md-8">    
-    <h4>Alternate elements</h4>
-    <p>Feel free to use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> in HTML5. <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
+    <h4>Development Effort</h4>
+        <i> Nothing is sweeter than reaping the fruits of your labor.</i> <br><br><br>
+         <table class="table table-hover">
+             <thead>
+             <tr><th>Total Personal Effort:</th><th>440 Working Hours (55 days) </th></tr> 
+             </thead>
+             <tbody>
+             <tr><td>Web App:</td><td>200 Working Hours (25 Personal Days)</td></tr>
+             <tr><td> Mobile App:</td><td> 160 Working Hours (20 Personal Days)</td></tr>
+             <tr><td>Mobile Web:</td><td> 10 Working Hours (1.25 Personal Days)</td></tr>
+             <tr><td>Extension:</td><td>30 Working Hours (3.75 Personal Days)</td></tr>
+             <tr><td>Documentation: </td><td>40 Working Hours (5 Personal Days)</td></tr>
+             </tbody>
+             </table><br>
+            
 
-    <div><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre></div>
     </div>
-    <div class="bs-example col-md-4" data-example-id="simple-em">
-        <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
-    </div>
+     <div class="col-md-4"><pre><code class="language-html" data-lang="html">
+     <span class="s">Psalms 128:2 ~The Holy Bible</span><br>
+     <span class="nt">King James Version:</span>
+     <span class="na"><i>For thou shalt eat the labour of thine hands: happy shalt thou be, and it shall be well with thee.</i></span><br>
+     <span class="nt">Good News Translation:</span>
+     <span class="na"> <i>Your work will provide for your needs; you will be happy and prosperous.</i></span><br>
+     <span class="nt">Common English Bible:</span>
+     <span class="na"><i>You will definitely enjoy what you've worked hard for— you'll be happy; and things will go well for you.</i></span>
+     
+     </code></pre></div>
 </div> 
 </div>
     </div>
@@ -1520,8 +1541,4 @@ When you create an application with Google App Engine, the app is automatically 
 </div>
 </div>  
 
-                            <script>
-                          var fingerprint = (new Fingerprint().get()) + "-" +  new Fingerprint({screen_resolution: true}).get();
-                          document.getElementById("fingerprint").innerHTML="Your browser FingerPrint is "+fingerprint.toString();
-                          </script>
 

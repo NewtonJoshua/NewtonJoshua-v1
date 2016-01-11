@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '771830059601215',
+        cookie     : true,  // enable cookies to allow the server to access 
+                            // the session
+        xfbml      : true,  // parse social plugins on this page
+        version    : 'v2.3' // use version 2.2
+      });
+
+      // Now that we've initialized the JavaScript SDK, we call 
+      // FB.getLoginStatus().  This function gets the state of the
+      // person visiting this page and can return one of three states to
+      // the callback you provide.  They can be:
+      //
+      // 1. Logged into your app ('connected')
+      // 2. Logged into Facebook, but not your app ('not_authorized')
+      // 3. Not logged into Facebook and can't tell if they are logged into
+      //    your app or not.
+      //
+      // These three cases are handled in the callback function.
+
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+
+      };
+
+      // Load the SDK asynchronously
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "js/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+      // Here we run a very simple test of the Graph API after login is
+      // successful.  See statusChangeCallback() for when this call is made.
+    var PostsAccessToken="CAAK9ZBbCHjT8BAGStUZCr1BKxOzKZCEitmzgIDtvM6pq0vx1136lAo5yKzBqduDbuwsZAvskYtdy8ikE19SRufmpJdDC1KaVyx29PCUQ1ZBGPTM6VoKHiDpK57UtObvi5EFd1QEbaBtT1koEf5O5KLd4wmJrrufZATEmpscTz5Ib5jRMXuNGPLFJJ4wemhD8HLhIY0yf0bZBDuP5ePl6tFs";
+            FB.api(
+            "/1008531222504381/feed",{access_token : PostsAccessToken},
+            function (response) {
+              if (response ) {
+                //console.log(JSON.stringify(response));
+                  var res= JSON.parse(response);
+                  for (var i=0; i< res.data.length; i++){
+                      var ele= res.data[i];
+                      console.log(ele.from);
+                      console.log(ele.story);
+                      console.log(ele.message);
+                      console.log(ele.created_time);
+                      console.log(ele.picture);
+                      console.log(ele.actions);
+                      
+                  }
+                  
+              }
+            }
+        );
+</script>
+</head>
+<body >
+  
+
+</body>
+</html>
